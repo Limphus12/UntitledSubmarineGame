@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Borrowite
   m_EditorClassIdentifier: 
   title: Borrowite Mining
-  description: Mine 9 pieces of Borrowite...
-  rewardAmount: 100
+  description: Mine 99 pieces of Borrowite...
+  rewardAmount: 10
