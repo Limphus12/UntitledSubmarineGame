@@ -35,7 +35,7 @@ public class Elevator : MonoBehaviour
     float moveI = 0;
     void Move(Vector3 position) 
     {
-        moveI += Time.deltaTime * positionSmooth;
+        moveI += (positionSmooth / 1000) * Time.deltaTime;
 
         //apply target rotation
         transform.localPosition = Vector3.Lerp(transform.localPosition, position, moveI);

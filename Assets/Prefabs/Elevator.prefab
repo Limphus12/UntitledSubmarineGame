@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2590805814518481485}
   - component: {fileID: 502510436885315153}
   - component: {fileID: 7246234574493574220}
+  - component: {fileID: 8993153853248944034}
   m_Layer: 0
   m_Name: props_med_lift.001
   m_TagString: Untagged
@@ -96,6 +97,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5448826949986158921, guid: 8e03ce4d8da0b304286c4fb7cd3dae59, type: 3}
+--- !u!114 &8993153853248944034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447434923211841755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3bcebbb4800c44a82392dc3134845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3790651435424156045
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +228,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 11.11
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -485,7 +498,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 11.11
+          m_FloatArgument: 1.11
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -684,4 +697,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4e6c2a6b5d8a7439d64903a6a8f49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionSmooth: 5
+  positionSmooth: 1
