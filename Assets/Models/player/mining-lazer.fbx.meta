@@ -435,6 +435,33 @@ ModelImporter:
   - first:
       74: -2938431262568428209
     second: Empty.012|EmptyAction
+  - first:
+      74: -88723805440604879
+    second: Cylinder|CylinderAction
+  - first:
+      74: 2099142064817969038
+    second: Cylinder|Empty.001Action.001
+  - first:
+      74: 5373422281644740382
+    second: Cylinder|Empty.002Action
+  - first:
+      74: 6544979609085678454
+    second: Cylinder|Empty.002Action.001
+  - first:
+      74: -6060431093526190441
+    second: Cylinder|Empty.002Action.002
+  - first:
+      74: 3568927189232510674
+    second: Cylinder|Empty.002Action.003
+  - first:
+      74: 5015253493731080710
+    second: Cylinder|Empty.002Action.004
+  - first:
+      74: 3863617712721618081
+    second: Cylinder|Empty.012Action
+  - first:
+      74: -5315980108583086191
+    second: Cylinder|EmptyAction
   externalObjects: {}
   materials:
     materialImportMode: 2
