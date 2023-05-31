@@ -703,6 +703,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 475967113616876896}
+        m_TargetAssemblyTypeName: ChipSpawner, Assembly-CSharp
+        m_MethodName: DeleteChips
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &475967113616876899
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,11 +824,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56645810eb6a9084480f1b8cc8c6dabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chipsToSpawn: 1
+  chipsToSpawn: 3
   chipPrefab: {fileID: 2451772027048978988, guid: 4b90393ce723dbb4a9c564c1e0c7ed06, type: 3}
   chipSpawnPoint: {fileID: 475967112552846653}
   questData:
   - {fileID: 11400000, guid: 14f0180b8e1c3674988f1e26d09db345, type: 2}
+  - {fileID: 11400000, guid: ef47410f1cc545c48b5e26944a62e8b9, type: 2}
+  - {fileID: 11400000, guid: 51a121a188e108344a4b38e631bd1203, type: 2}
+  chips: []
 --- !u!1 &475967113895480555
 GameObject:
   m_ObjectHideFlags: 0

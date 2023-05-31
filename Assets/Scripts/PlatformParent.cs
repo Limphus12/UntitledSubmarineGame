@@ -6,21 +6,31 @@ public class PlatformParent : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        //collision.transform.SetParent(transform);
+        collision.transform.SetParent(transform);
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        //collision.transform.SetParent(null);
+        collision.transform.SetParent(null);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.SetParent(transform);
+        //other.transform.SetParent(transform);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+        //other.transform.SetParent(null);
+    }
+
+    public void MoveChildren(Vector3 targetPos, float speed)
+    {
+        Transform[] children = transform.GetComponentsInChildren<Transform>();
+
+        foreach (Transform child in children)
+        {
+            child.localPosition = Vector3.MoveTowards(child.localPosition, targetPos, speed * Time.deltaTime);
+        }
     }
 }
