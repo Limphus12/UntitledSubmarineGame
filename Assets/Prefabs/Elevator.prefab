@@ -697,4 +697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4e6c2a6b5d8a7439d64903a6a8f49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionSmooth: 1
+  movementAxis: 1
+  speed: 1
+  platform: {fileID: 8993153853248944034}

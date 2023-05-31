@@ -12,6 +12,8 @@ public class ChipSpawner : MonoBehaviour
 
     [SerializeField] private List<QuestData> questData = new List<QuestData>();
 
+    [SerializeField] private List<GameObject> chips = new List<GameObject>();
+
     private void Start()
     {
         SpawnChips();
@@ -29,7 +31,8 @@ public class ChipSpawner : MonoBehaviour
 
     void SpawnChip()
     {
-        GameObject chip = Instantiate(chipPrefab, chipSpawnPoint.position, Quaternion.identity);
+        //spawn and add chip to list
+        GameObject chip = Instantiate(chipPrefab, chipSpawnPoint.position, Quaternion.identity); chips.Add(chip);
 
         QuestChip questChip = chip.GetComponent<QuestChip>();
 
@@ -43,7 +46,7 @@ public class ChipSpawner : MonoBehaviour
 
     public void SpawnChip(QuestData questData)
     {
-        GameObject chip = Instantiate(chipPrefab, chipSpawnPoint.position, Quaternion.identity);
+        GameObject chip = Instantiate(chipPrefab, chipSpawnPoint.position, Quaternion.identity); chips.Add(chip);
 
         QuestChip questChip = chip.GetComponent<QuestChip>();
 
@@ -53,5 +56,15 @@ public class ChipSpawner : MonoBehaviour
         {
             questChip.Data = questData;
         }
+    }
+
+    public void DeleteChips()
+    {
+        foreach (GameObject chip in chips)
+        {
+            if (chip != null) Destroy(chip);
+        }
+
+        chips.Clear();
     }
 }

@@ -11,6 +11,8 @@ public class QuestBin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (currentQuestChip && currentQuestData && chipSpawner) DenyQuest();
+
         QuestChip questChip = other.GetComponent<QuestChip>();
 
         if (!questChip) return;
