@@ -60,7 +60,7 @@ public class Elevator : MonoBehaviour
     {
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPos, speed * Time.deltaTime);
 
-        if (platform) platform.MoveChildren(targetPos, speed * Time.deltaTime);
+        //if (platform) platform.MoveChildren(targetPos, speed * Time.deltaTime);
 
         //Transform[] children = transform.GetComponentsInChildren<Transform>();
 
@@ -74,6 +74,8 @@ public class Elevator : MonoBehaviour
 
     void EndMove()
     {
+        transform.localPosition = targetPos;
+
         isMoving = false;
     }
 }
