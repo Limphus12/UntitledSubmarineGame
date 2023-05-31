@@ -26,6 +26,7 @@ public class QuestBin : MonoBehaviour
     {
         Debug.Log("Accepting Quest");
         QuestManager.SetQuest(currentQuestData);
+        if (currentQuestChip) Destroy(currentQuestChip);
     }
 
     public void DenyQuest()
