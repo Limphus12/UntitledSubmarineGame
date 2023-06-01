@@ -1157,6 +1157,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: topsideplayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7454124701523634303, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454124701523634303, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 1548600249}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
 --- !u!1001 &1430059028
@@ -1805,6 +1813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86c9226e6c72824babcf7eba16d8728, type: 3}
+--- !u!20 &1548600249 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6401147163415065142, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+  m_PrefabInstance: {fileID: 1282465507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623708510
 GameObject:
   m_ObjectHideFlags: 0
