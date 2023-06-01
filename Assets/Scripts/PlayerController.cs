@@ -274,7 +274,7 @@ public class PlayerController : MonoBehaviour
 
                     if (Input.GetKeyDown(KeyCode.F))
                     {
-                        GameManager.loadGame();
+                        GameManager.LoadIntoGame();
                     }
                 }
                 else submouseOver.SetActive(false);

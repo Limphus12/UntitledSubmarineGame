@@ -13,12 +13,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Depthinfo;
     public TextMeshProUGUI Depthinfo1;
     public TextMeshProUGUI titleChange;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //RenderSettings.fogColor = fogColor;
-        Submarine = submarine;
-    }
+
+    
 
     public GameObject submarine;
     public GameObject subhud;
@@ -29,16 +25,19 @@ public class GameManager : MonoBehaviour
     public SubmarineController SubController;
     float depths;
     float depthp;
+
     [Header("Titles")]
-        [SerializeField] private TitleStruct[] titleStructs;
-    // Update is called once per frame
+    [SerializeField] private TitleStruct[] titleStructs;
+
+    void Start()
+    {
+        Submarine = submarine;
+    }
+
     void Update()
     {
+        if (Ingame) InGame();
 
-        if (Ingame)
-        {
-            InGame();
-        }
         else
         {
 
@@ -56,27 +55,15 @@ public class GameManager : MonoBehaviour
         int depthInt1 = Mathf.RoundToInt(depthp);
         Depthinfo1.text = "" + depthInt1;
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Switch();
-        }
+        if (Input.GetKeyDown(KeyCode.F)) Switch();
 
-        if (depths < 10)
-        {
-            SceneManager.LoadSceneAsync(0);
-        }
+        if (depths < 10) LoadIntoHangar();
 
         float y;
 
-        if (inSubmarine)
-        {
-            y = depths;
-        }
+        if (inSubmarine) y = depths;
 
-        else
-        {
-            y = depthp;
-        }
+        else y = depthp;
 
         float normalizedY = Mathf.InverseLerp(0, 10000, y);
 
@@ -93,29 +80,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void loadGame()
+    public static void LoadIntoHangar()
     {
         SceneManager.LoadSceneAsync(1);
+    }
+
+    public static void LoadIntoGame()
+    {
+        SceneManager.LoadSceneAsync(2);
     }
 
     bool inSubmarine = true;
     private void Switch()
     {
         inSubmarine = !inSubmarine;
-        //submarine.SetActive(inSubmarine);
-        subhud.SetActive(inSubmarine);
-        subcamerarig.SetActive(inSubmarine);
-        player.SetActive(!inSubmarine);
-        if (!inSubmarine)
-        {
-            player.transform.position = playerSpawnpoint.transform.position;
-        }
+        subhud.SetActive(inSubmarine); subcamerarig.SetActive(inSubmarine); player.SetActive(!inSubmarine);
+
+        if (!inSubmarine) player.transform.position = playerSpawnpoint.transform.position;
+
         SubController.enabled = inSubmarine;
     }
 }
 
 [System.Serializable]
-
 struct TitleStruct
 {
     public float depth;
