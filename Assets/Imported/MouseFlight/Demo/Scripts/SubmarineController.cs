@@ -81,20 +81,6 @@ public class SubmarineController : MonoBehaviour
         Vector3 v3Angle = transform.rotation.eulerAngles;
 
         horizonmovement = Input.GetAxis("Horizontal");
-        //if (Mathf.Abs(horizonmovement) > .25f && v3Angle.z < 30)
-        //{
-        //    rollOverride = true;
-        //}
-        //if (Mathf.Abs(horizonmovement) > .25f && v3Angle.z > 330)
-        //{
-        //    rollOverride = true;
-        //}
-        //float keyboardPitch = Input.GetAxis("Vertical");
-        //if (Mathf.Abs(keyboardPitch) > .25f)
-        //{
-        //pitchOverride = true;
-        //rollOverride = true;
-        //}
 
         // Calculate the autopilot stick inputs.
         float autoYaw = 0f;
