@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936387125113434090}
-  - component: {fileID: 494770846223054256}
+  - component: {fileID: 3437592728100354273}
   m_Layer: 0
   m_Name: MiningLaser
   m_TagString: Untagged
@@ -129,15 +129,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3741774021279055103}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000005960464}
-  m_LocalPosition: {x: 0.582, y: -0.349, z: 0.247}
+  m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 0.5, y: -0.35, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6063308590174548193}
   m_Father: {fileID: 4463143738344792965}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &494770846223054256
+  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
+--- !u!114 &3437592728100354273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,14 +146,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3741774021279055103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d7d08d57f7dd1c4385faa8690393774, type: 3}
+  m_Script: {fileID: 11500000, guid: f1a6090f731e8484987224d9f2aa851b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSway: 1
-  amount: 0.1
-  maxAmount: 1.5
-  smoothAmount: 5
-  weaponRecoil: 3
+  defaultPosition: {x: 0.5, y: -0.35, z: 0.25}
+  defaultRotation: {x: 0.008726535, y: 0, z: 0, w: 0.9999619}
+  defaultSwaySmooth: 8
+  defaultSwayAmount: 2
+  defaultSwayMaximum: 2
+  defaultTiltSmooth: 8
+  defaultTiltAmount: 15
+  defaultTiltMaximum: 15
 --- !u!1 &4368999853473166314
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,19 +683,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -700,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18d8646e78dea244d9c6ae03b6ed67cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
