@@ -9,6 +9,8 @@ public class Button : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("interacting with button");
+
         buttonEvent?.Invoke();
     }
 }

@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
             {
                 float currentX = Input.GetAxis("Horizontal");
 
-                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, currentX * -cameraLeanAmount);
+                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, currentX * cameraLeanAmount);
                 transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
             }
         }
