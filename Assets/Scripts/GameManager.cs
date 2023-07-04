@@ -7,14 +7,11 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Color fogColor;
     public Gradient fogGradient;
     public bool Ingame;
     public TextMeshProUGUI Depthinfo;
     public TextMeshProUGUI Depthinfo1;
     public TextMeshProUGUI titleChange;
-
-    
 
     public GameObject submarine;
     public GameObject subhud;
