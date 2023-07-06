@@ -41,11 +41,27 @@ public class Gem : MonoBehaviour, IMineable
     {
         MiningEffects();
 
-        //add points (randomize amount)
-
         if (currentMineAmount >= mineAmount) EndMining();
 
         else StartCoroutine(MiningWaitTimer());
+    }
+
+    private IEnumerator MiningWaitTimer()
+    {
+        canMine = false;
+
+        yield return new WaitForSeconds(miningCooldown);
+
+        currentMineAmount++;
+
+        canMine = true;
+    }
+
+    private void EndMining()
+    {
+        GameManager.ModifyPoints((int)Random.Range(pointMinMax.x, pointMinMax.y));
+
+        Destroy(gameObject);
     }
 
     private void MiningEffects()
@@ -76,22 +92,5 @@ public class Gem : MonoBehaviour, IMineable
     private void EndSizeLerp()
     {
         sizeI = 0;
-    }
-
-
-    private void EndMining()
-    {
-        Destroy(gameObject);
-    }
-
-    private IEnumerator MiningWaitTimer()
-    {
-        canMine = false;
-
-        yield return new WaitForSeconds(miningCooldown);
-
-        currentMineAmount++;
-
-        canMine = true;
     }
 }

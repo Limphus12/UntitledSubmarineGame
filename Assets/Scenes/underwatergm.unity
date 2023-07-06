@@ -5786,6 +5786,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328516613781114109, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660591836855164926, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_text
+      value: 'Depth: '
+      objectReference: {fileID: 0}
     - target: {fileID: 6077115782399160364, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5878,6 +5950,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e759710a3071154884886788f678435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleStructs:
+  - depth: 0
+    text: The Shallows
+  - depth: 2000
+    text: The Century Rim
+  - depth: 4000
+    text: The Mossbasin
+  - depth: 6000
+    text: The Twilight Zone
+  - depth: 8000
+    text: The Stix
+  - depth: 10000
+    text: The Hadal Trenches
   fogGradient:
     serializedVersion: 2
     key0: {r: 0.46274513, g: 0.6313726, b: 0.6039216, a: 1}
@@ -5911,25 +5996,14 @@ MonoBehaviour:
   Depthinfo: {fileID: 712922788}
   Depthinfo1: {fileID: 63882630}
   titleChange: {fileID: 1796510647}
+  scoreCounterSubmarine: {fileID: 763710377}
+  scoreCounterPlayer: {fileID: 1711186082}
   submarine: {fileID: 1630319318571356}
   subhud: {fileID: 574160497}
   subcamerarig: {fileID: 1340265353896608}
   player: {fileID: 725965723}
   playerSpawnpoint: {fileID: 1684737230}
   SubController: {fileID: 114329657850634974}
-  titleStructs:
-  - depth: 0
-    text: The Shallows
-  - depth: 2000
-    text: The Century Rim
-  - depth: 4000
-    text: The Mossbasin
-  - depth: 6000
-    text: The Twilight Zone
-  - depth: 8000
-    text: The Stix
-  - depth: 10000
-    text: The Hadal Trenches
 --- !u!4 &749051816
 Transform:
   m_ObjectHideFlags: 0
@@ -10767,18 +10841,6 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114479940590868176, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479940590868176, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479940590868176, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 114491796399247544, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
       propertyPath: mouseFlight
       value: 
@@ -10875,6 +10937,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 467.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8701674200339706500, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
+      propertyPath: m_text
+      value: New Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
 --- !u!114 &763710376 stripped
@@ -10886,6 +10952,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8abd0fce25b7e1748ab2e3d5cf7d3066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &763710377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8701674200339706500, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}
+  m_PrefabInstance: {fileID: 763710375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &816374057
@@ -26222,6 +26299,17 @@ Transform:
   m_Father: {fileID: 4563112922585786}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711186082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6356986684920283499, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+  m_PrefabInstance: {fileID: 725965722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1796510647 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 206139532708212191, guid: 16580bf03b0b2cd43a91d480153f3fa0, type: 3}

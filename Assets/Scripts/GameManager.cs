@@ -7,24 +7,41 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    public Gradient fogGradient;
-    public bool Ingame;
-    public TextMeshProUGUI Depthinfo;
-    public TextMeshProUGUI Depthinfo1;
-    public TextMeshProUGUI titleChange;
-
-    public GameObject submarine;
-    public GameObject subhud;
-    public GameObject subcamerarig;
-    public GameObject player;
-    public static GameObject Submarine;
-    public GameObject playerSpawnpoint;
-    public SubmarineController SubController;
-    float depths;
-    float depthp;
-
-    [Header("Titles")]
+    [Header("Environment Stuff")]
     [SerializeField] private TitleStruct[] titleStructs;
+    [SerializeField] private Gradient fogGradient;
+
+    [Header("UI Stuff")]
+    [SerializeField] private bool Ingame;
+    [SerializeField] private TextMeshProUGUI Depthinfo, Depthinfo1, titleChange;
+
+    [Space]
+    [SerializeField] private TextMeshProUGUI scoreCounterSubmarine, scoreCounterPlayer;
+
+    [Header("Player Stuff")]
+    [SerializeField] private GameObject submarine;
+    [SerializeField] private GameObject subhud, subcamerarig, player;
+    [Space, SerializeField] private GameObject playerSpawnpoint;
+    [Space, SerializeField] private SubmarineController SubController;
+
+
+    private float depths;
+    private float depthp;
+
+
+    
+
+
+    public static GameObject Submarine;
+
+    public static int Points;
+
+    public static void ResetPoints() => Points = 0;
+
+    public static void ModifyPoints(int amount) => Points += amount;
+
+
+
 
     void Start()
     {
@@ -43,14 +60,17 @@ public class GameManager : MonoBehaviour
 
     void InGame()
     {
+        scoreCounterPlayer.text = "Score: " + Points;
+        scoreCounterSubmarine.text = "Score: " + Points;
+
         depths = Mathf.Abs(submarine.transform.position.y);
 
         int depthInt = Mathf.RoundToInt(depths);
-        Depthinfo.text = "" + depthInt;
+        Depthinfo.text = "Depth: " + depthInt;
 
         depthp = Mathf.Abs(player.transform.position.y);
         int depthInt1 = Mathf.RoundToInt(depthp);
-        Depthinfo1.text = "" + depthInt1;
+        Depthinfo1.text = "Depth: " + depthInt1;
 
         if (Input.GetKeyDown(KeyCode.F)) Switch();
 
