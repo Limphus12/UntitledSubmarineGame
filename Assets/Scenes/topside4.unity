@@ -1606,6 +1606,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -5624499684036504043, guid: 3da5b02a7f180434db723f6371ada9d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -5437993328390847883, guid: 3da5b02a7f180434db723f6371ada9d7, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.5
@@ -1618,6 +1622,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ef3f4d7e01bb4fc46982450e7f48261b, type: 2}
+    - target: {fileID: -1857309847194865932, guid: 3da5b02a7f180434db723f6371ada9d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -1063203228461421988, guid: 3da5b02a7f180434db723f6371ada9d7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
