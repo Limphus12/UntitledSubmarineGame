@@ -5914,6 +5914,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7454124701523634303, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454124701523634303, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 1141632712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
 --- !u!1 &725965723 stripped
@@ -20994,6 +21002,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!20 &1141632712 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6401147163415065142, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+  m_PrefabInstance: {fileID: 725965722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1163603245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5495708408082555340, guid: d23bfd4c195482a42ae2f36f78ba7d1e, type: 3}
