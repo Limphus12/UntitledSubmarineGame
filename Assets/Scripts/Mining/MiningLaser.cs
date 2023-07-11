@@ -14,11 +14,17 @@ public class MiningLaser : MonoBehaviour
     [SerializeField] private LineRenderer miningLaser;
     [SerializeField] private GameObject hitParticles;
 
-    private bool isMining;
+
+    [Header("SFX")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip startMineClip, mineClip, endMineClip;
+
+    private bool canMine, isMining, wasMining;
 
     private void Update()
     {
         Inputs();
+        SFX();
     }
 
     private void LateUpdate()
@@ -45,7 +51,15 @@ public class MiningLaser : MonoBehaviour
                 Destroy(particles, 1f);
             }
 
-            if (mineable != null) { if (mineable.CanMine()) mineable.Mine(); };
+            if (mineable != null)
+            {
+                if (mineable.CanMine())
+                {
+                    canMine = true; mineable.Mine();
+                }
+            }
+
+            else if (mineable == null) canMine = false;
         }
     }
 
@@ -70,5 +84,53 @@ public class MiningLaser : MonoBehaviour
 
             else miningLaser.SetPosition(1, firePoint.position);
         }
+    }
+
+    private void SFX()
+    {
+        if (!audioSource) return;
+        if (!canMine) { audioSource.Stop(); return; }
+
+        if (!isMining)
+        {
+            //if we were mining last frame, but not mining now, play the end mining sound
+            if (wasMining)
+            {
+                if (audioSource.isPlaying) audioSource.Stop();
+
+                audioSource.loop = false; audioSource.clip = endMineClip; audioSource.Play();
+            }
+        }
+
+        else if (isMining)
+        {
+            //if we are mining and we was not mining beforehand, play the start mining sound
+            if (!wasMining)
+            {
+                if (audioSource.isPlaying) audioSource.Stop();
+
+                audioSource.loop = false; audioSource.clip = startMineClip; audioSource.Play();
+            }
+
+            //if we are mining and we were mining beforehand, make sure the start clip plays fully before moving onto the mining loop
+            else if (wasMining)
+            {
+                if (canMine)
+                {
+                    if (audioSource.isPlaying) return;
+
+                    audioSource.loop = true; audioSource.clip = mineClip; audioSource.Play();
+                }
+
+                else
+                {
+                    if (audioSource.isPlaying) audioSource.Stop();
+
+                    audioSource.loop = false; audioSource.clip = endMineClip; audioSource.Play();
+                }
+            }
+        }
+
+        wasMining = isMining;
     }
 }
