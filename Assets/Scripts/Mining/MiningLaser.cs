@@ -19,7 +19,7 @@ public class MiningLaser : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip startMineClip, mineClip, endMineClip;
 
-    private bool canMine, isMining, wasMining;
+    private bool isHitting, isMining, wasMining;
 
     private void Update()
     {
@@ -43,6 +43,8 @@ public class MiningLaser : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, maxMiningDistance))
         {
+            isHitting = true;
+
             IMineable mineable = hit.transform.GetComponent<IMineable>();
 
             if (hitParticles)
@@ -55,12 +57,12 @@ public class MiningLaser : MonoBehaviour
             {
                 if (mineable.CanMine())
                 {
-                    canMine = true; mineable.Mine();
+                    mineable.Mine();
                 }
             }
-
-            else if (mineable == null) canMine = false;
         }
+
+        else isHitting = false;
     }
 
     private void VFX()
@@ -89,7 +91,8 @@ public class MiningLaser : MonoBehaviour
     private void SFX()
     {
         if (!audioSource) return;
-        if (!canMine) { audioSource.Stop(); return; }
+
+
 
         if (!isMining)
         {
@@ -115,7 +118,7 @@ public class MiningLaser : MonoBehaviour
             //if we are mining and we were mining beforehand, make sure the start clip plays fully before moving onto the mining loop
             else if (wasMining)
             {
-                if (canMine)
+                if (isHitting)
                 {
                     if (audioSource.isPlaying) return;
 
