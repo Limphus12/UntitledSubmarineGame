@@ -21222,7 +21222,7 @@ MonoBehaviour:
   - {fileID: 8500354551706616846, guid: 8456c7142718a6e499a68e210e611e07, type: 3}
   tails: []
   segmentSeperation: 2
-  segmentsCountMinMax: {x: 12, y: 24}
+  segmentsCountMinMax: {x: 10, y: 20}
   segmentSizeCurve:
     serializedVersion: 2
     m_Curve:
