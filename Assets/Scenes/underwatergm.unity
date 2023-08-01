@@ -288,6 +288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &153176951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
+  m_PrefabInstance: {fileID: 1804230271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &165277978
 Mesh:
   m_ObjectHideFlags: 0
@@ -15947,6 +15952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishFace1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03115ec7a637e65459c8c22b70ba099f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2854563699051640978, guid: 03115ec7a637e65459c8c22b70ba099f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -17.597242
@@ -21171,6 +21180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920002532}
+  - {fileID: 153176951}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21209,10 +21219,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heads: []
   segments:
-  - {fileID: 1806774859763721073, guid: c45dd7569e7553c4abb67447c0d7f3ad, type: 3}
+  - {fileID: 8500354551706616846, guid: 8456c7142718a6e499a68e210e611e07, type: 3}
   tails: []
   segmentSeperation: 2
   segmentsCountMinMax: {x: 12, y: 24}
+  segmentSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.02212644
+      outSlope: 0.02212644
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.30129868
+    - serializedVersion: 3
+      time: 0.25
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: -0.019845359
+      outSlope: -0.019845359
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  segmentSeperationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: 0.02212644
+      outSlope: 0.02212644
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.30129868
+    - serializedVersion: 3
+      time: 0.25
+      value: 4
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.019845359
+      outSlope: -0.019845359
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!20 &1141632712 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6401147163415065142, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
@@ -26550,11 +26626,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1125854086}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26562,11 +26638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -196.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.95
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ef559be7dbe74547a98da3ecc37fca2, type: 3}
       propertyPath: m_LocalRotation.w

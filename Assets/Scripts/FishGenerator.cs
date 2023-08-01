@@ -12,6 +12,9 @@ public class FishGenerator : MonoBehaviour
 
     [SerializeField] private Vector2Int segmentsCountMinMax;
 
+    [SerializeField] private AnimationCurve segmentSizeCurve;
+    [SerializeField] private AnimationCurve segmentSeperationCurve;
+
     private void Awake()
     {
         Generate();
@@ -44,11 +47,19 @@ public class FishGenerator : MonoBehaviour
 
         for (int i = 0; i < length; i++)
         {
-            currentSeperation -= segmentSeperation;
+            float seperation = segmentSeperationCurve.Evaluate(Mathf.InverseLerp(0, length, i));
+
+            currentSeperation -= seperation;
 
             Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z + currentSeperation);
 
             GameObject segment = Instantiate(segments[0], position, Quaternion.identity);
+
+            //calculate the interpolation value, so we can use this in our graph evaluation
+            float h = segmentSizeCurve.Evaluate(Mathf.InverseLerp(0, length, i));
+
+            //and scale the segment!
+            segment.transform.localScale = new Vector3(h, h, h);
 
             //grab and assign the previous rigidbody to the joint's connected rigidbody
             Joint joint = segment.GetComponent<Joint>(); if (joint) joint.connectedBody = previousRigidbody;
