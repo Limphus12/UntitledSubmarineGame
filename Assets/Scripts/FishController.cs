@@ -13,13 +13,13 @@ public class FishController : MonoBehaviour
     [SerializeField] private float rotateSpeed;
 
 
-    [Header("PREDICTION")]
-    [SerializeField] private float _maxDistancePredict = 100;
-    [SerializeField] private float _minDistancePredict = 5;
-    [SerializeField] private float _maxTimePrediction = 5;
+    [Header("Prediction")]
+    [SerializeField] private float maxDistancePredict = 100;
+    [SerializeField] private float minDistancePredict = 5;
+    [SerializeField] private float maxTimePrediction = 5;
     private Vector3 standardPrediction, deviatedPrediction;
 
-    [Header("DEVIATION")]
+    [Header("Deviation")]
     [SerializeField] private float deviationAmount = 50;
     [SerializeField] private float deviationSpeed = 2;
 
@@ -35,7 +35,7 @@ public class FishController : MonoBehaviour
         if (target) targetRb = target.GetComponent<Rigidbody>();
     }
 
-    float CalculateLeadTimePercentage() => Mathf.InverseLerp(_minDistancePredict, _maxDistancePredict, Vector3.Distance(transform.position, target.transform.position));
+    float CalculateLeadTimePercentage() => Mathf.InverseLerp(minDistancePredict, maxDistancePredict, Vector3.Distance(transform.position, target.transform.position));
 
     private void FixedUpdate()
     {
@@ -52,7 +52,7 @@ public class FishController : MonoBehaviour
 
     private void PredictMovement(float leadTimePercentage)
     {
-        var predictionTime = Mathf.Lerp(0, _maxTimePrediction, leadTimePercentage);
+        var predictionTime = Mathf.Lerp(0, maxTimePrediction, leadTimePercentage);
 
         standardPrediction = targetRb.position + targetRb.velocity * predictionTime;
     }

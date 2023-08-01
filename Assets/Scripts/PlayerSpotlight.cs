@@ -53,7 +53,7 @@ public class PlayerSpotlight : MonoBehaviour
                 direction = transform.InverseTransformPoint(point);
                 lookRotation = Quaternion.LookRotation(direction);
                 rotation = lookRotation.eulerAngles;
-                transform.localRotation = Quaternion.Euler(0f, rotation.y, 0f);
+                transform.localRotation = Quaternion.Euler(rotation);
 
                 break;
             case RotationMode.Lerped:
@@ -64,7 +64,7 @@ public class PlayerSpotlight : MonoBehaviour
                 direction = transform.InverseTransformPoint(point);
                 lookRotation = Quaternion.LookRotation(direction);
                 rotation = Quaternion.Lerp(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
-                transform.localRotation = Quaternion.Euler(0f, rotation.y, 0f);
+                transform.localRotation = Quaternion.Euler(rotation);
 
                 break;
             case RotationMode.Slerped:
@@ -74,7 +74,7 @@ public class PlayerSpotlight : MonoBehaviour
                 direction = transform.InverseTransformPoint(point);
                 lookRotation = Quaternion.LookRotation(direction);
                 rotation = Quaternion.Slerp(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
-                transform.localRotation = Quaternion.Euler(0f, rotation.y, 0f);
+                transform.localRotation = Quaternion.Euler(rotation);
 
                 break;
             case RotationMode.Fixed:
@@ -82,7 +82,7 @@ public class PlayerSpotlight : MonoBehaviour
                 //Constant Rotation - Fixed no. of degrees per second/turn rate.
 
                 direction = transform.InverseTransformPoint(point);
-                direction.y = 0.0f;
+                //direction.y = 0.0f;
 
                 lookRotation = Quaternion.LookRotation(direction);
                 finalLookRotation = Quaternion.RotateTowards(transform.localRotation, lookRotation, Time.deltaTime * rotationSpeed);
