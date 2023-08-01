@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 03115ec7a637e65459c8c22b70ba099f
 ModelImporter:
   serializedVersion: 20300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 6612135421000383800
+    second: Armature|bite
   externalObjects:
   - first:
       type: UnityEngine:Material
