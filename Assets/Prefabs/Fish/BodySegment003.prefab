@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8500354551706616848}
   - component: {fileID: 8500354551706616847}
   m_Layer: 0
-  m_Name: BodySegment002 1
+  m_Name: BodySegment003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,15 +122,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 071a7a9d74912ab4a91b0447963f758f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0378379e-15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 071a7a9d74912ab4a91b0447963f758f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.046966553
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 071a7a9d74912ab4a91b0447963f758f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 071a7a9d74912ab4a91b0447963f758f, type: 3}
       propertyPath: m_LocalRotation.w

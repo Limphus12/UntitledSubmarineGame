@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         Color targetColor = fogGradient.Evaluate(normalizedY);
 
         RenderSettings.fogColor = targetColor;
-        RenderSettings.skybox.SetColor("_Tint", targetColor);
+        //RenderSettings.skybox.SetColor("_Tint", targetColor);
         foreach (TitleStruct titleStruct in titleStructs)
         {
             if (y >= titleStruct.depth)

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f8c5335bf7180814698913d658cdeb38, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.458
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -21562,15 +21562,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a180d7b2d879bf4fb29ea1cb4b25c0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a180d7b2d879bf4fb29ea1cb4b25c0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.504797
+      value: -0.50479126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a180d7b2d879bf4fb29ea1cb4b25c0d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a180d7b2d879bf4fb29ea1cb4b25c0d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27344,29 +27344,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0.02212644
-      outSlope: 0.02212644
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.30129868
-    - serializedVersion: 3
-      time: 0.25
-      value: 2
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 1
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0.5
-      inSlope: -0.019845359
-      outSlope: -0.019845359
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 1
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -27377,29 +27368,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 2
-      inSlope: 0.02212644
-      outSlope: 0.02212644
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.30129868
-    - serializedVersion: 3
-      time: 0.25
-      value: 4
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 1
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: -0.019845359
-      outSlope: -0.019845359
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 1
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
