@@ -64,6 +64,7 @@ public class SubmarineController : MonoBehaviour
     private float verticalMovement;
     private float horizontalMovement;
 
+    public Vector2 GetSubmarineInput => new Vector2(verticalMovement, horizontalMovement);
 
     private void Update()
     {
@@ -106,6 +107,8 @@ public class SubmarineController : MonoBehaviour
     private float currentThrust;
 
     public float GetCurrentThrust => currentThrust;
+
+
 
     void ChangeSpeed(float speed)
     {

@@ -46,7 +46,7 @@ public class SubmarineFuel : MonoBehaviour
         //    UseFuel();
         //}
 
-        if (submarineController.GetCurrentThrust > 0.1f)
+        if (submarineController.GetCurrentThrust > 0.1f || (submarineController.GetSubmarineInput.magnitude > 0f && submarineRB.velocity.magnitude > 2.5f))
         {
             UseFuel();
         }
