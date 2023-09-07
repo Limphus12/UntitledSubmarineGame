@@ -5784,6 +5784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108118375059343666, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e798834f626d51a48a50e0d80d77cbf8, type: 3}
     - target: {fileID: 1397611880133551491, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21569,7 +21573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110565684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 3.25}
+  m_LocalPosition: {x: 0, y: 6.513, z: 3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4563112922585786}
@@ -21613,14 +21617,14 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.6886792, g: 0.6564113, b: 0.48402455, a: 1}
-  m_Intensity: 10000
-  m_Range: 400
-  m_SpotAngle: 57.294685
-  m_InnerSpotAngle: 30
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 100000
+  m_Range: 1103.2882
+  m_SpotAngle: 41.34104
+  m_InnerSpotAngle: 14.046349
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -27822,7 +27826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1809217483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27835,7 +27839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c2cec47f681134192fcfe6e086bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 12
   forceMulti: 5
   rotateSpeed: 100
   maxDistancePredict: 100
@@ -27843,7 +27847,7 @@ MonoBehaviour:
   maxTimePrediction: 5
   deviationAmount: 50
   deviationSpeed: 2
-  wanderTargetRadius: 1000
+  wanderTargetRadius: 120
   testObject: {fileID: 173309586}
   movementType: 0
   target: {fileID: 4563112922585786}
