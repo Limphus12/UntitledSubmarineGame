@@ -10,7 +10,9 @@ public class GameStateManager : MonoBehaviour
 
     public void SwitchState(GameState newState)
     {
+        if (newState == currentState) return;
 
+        currentState = newState;
     }
 
     public GameState GetGameState() => currentState;
