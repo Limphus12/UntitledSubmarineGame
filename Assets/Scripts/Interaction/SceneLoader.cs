@@ -13,18 +13,18 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(int scene)
     {
-        fadeToBlackAnimator.SetTrigger("fadeTo");
-
         loadSceneEvent?.Invoke();
+
+        fadeToBlackAnimator.SetTrigger("fadeTo");
 
         StartCoroutine(LoadSceneFade(scene));
     }
 
     public void LoadScene(string scene)
     {
-        fadeToBlackAnimator.SetTrigger("fadeTo");
-
         loadSceneEvent?.Invoke();
+
+        fadeToBlackAnimator.SetTrigger("fadeTo");
 
         StartCoroutine(LoadSceneFade(scene));
     }

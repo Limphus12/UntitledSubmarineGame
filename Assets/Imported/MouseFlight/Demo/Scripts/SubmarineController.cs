@@ -61,16 +61,15 @@ public class SubmarineController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private float vertmovement;
-    private float horizonmovement;
+    private float verticalMovement;
+    private float horizontalMovement;
 
 
     private void Update()
     {
-        vertmovement = Input.GetAxis("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space)) ToggleThrust();
-        if (enginetoggle) ChangeSpeed(0);
+        if (engineToggle) ChangeSpeed(0);
         else if (Input.GetKey(KeyCode.LeftShift)) ChangeSpeed(maxthrust);
         else ChangeSpeed(thrust);
         // When the player commands their own stick input, it should override what the
@@ -80,7 +79,7 @@ public class SubmarineController : MonoBehaviour
 
         Vector3 v3Angle = transform.rotation.eulerAngles;
 
-        horizonmovement = Input.GetAxis("Horizontal");
+        horizontalMovement = Input.GetAxis("Horizontal");
 
         // Calculate the autopilot stick inputs.
         float autoYaw = 0f;
@@ -92,18 +91,20 @@ public class SubmarineController : MonoBehaviour
         // Use either keyboard or autopilot input.
         yaw = autoYaw;
         pitch = autoPitch;
-        roll = (rollOverride) ? horizonmovement : autoRoll;
+        roll = (rollOverride) ? horizontalMovement : autoRoll;
     }
 
-    private bool enginetoggle = true;
+    private bool engineToggle = true;
 
     private void ToggleThrust()
     {
-        enginetoggle = !enginetoggle;
+        engineToggle = !engineToggle;
     }
 
     private float previousSpeed, speedI = 0f;
-    private float currentthrust;
+    private float currentThrust;
+
+    public float GetCurrentThrust => currentThrust;
 
     void ChangeSpeed(float speed)
     {
@@ -115,7 +116,7 @@ public class SubmarineController : MonoBehaviour
         }
 
         //calculate our current speed by lerping between the new speed and current speed
-        currentthrust = Mathf.Lerp(currentthrust, speed, (speedI + Time.deltaTime) * 5);
+        currentThrust = Mathf.Lerp(currentThrust, speed, (speedI + Time.deltaTime) * 5);
     }
 
     private void RunAutopilot(Vector3 flyTarget, out float yaw, out float pitch, out float roll)
@@ -166,10 +167,10 @@ public class SubmarineController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        moveDirection = (Vector3.up * verticalThrust * vertmovement * forceMult * 100) + (Vector3.right * horizontalThrust * horizonmovement * forceMult * 100);
+        moveDirection = (Vector3.up * verticalThrust * verticalMovement * forceMult * 100) + (Vector3.right * horizontalThrust * horizontalMovement * forceMult * 100);
         // Ultra simple flight where the plane just gets pushed forward and manipulated
         // with torques to turn.
-        rb.AddRelativeForce(((Vector3.forward * currentthrust * forceMult * 100) + moveDirection) * Time.fixedDeltaTime, ForceMode.Force);
+        rb.AddRelativeForce(((Vector3.forward * currentThrust * forceMult * 100) + moveDirection) * Time.fixedDeltaTime, ForceMode.Force);
         rb.AddRelativeTorque(new Vector3(turnTorque.x * pitch,
                                             turnTorque.y * yaw,
                                             -turnTorque.z * roll) * forceMult,

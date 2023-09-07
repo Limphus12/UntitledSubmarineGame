@@ -28675,6 +28675,7 @@ MonoBehaviour:
   maxFuel: 100
   fuelConsumption: 1
   submarineRB: {fileID: 54841044466874520}
+  submarineController: {fileID: 114329657850634974}
   slider: {fileID: 763710376}
   NoFuelEvent:
     m_PersistentCalls:

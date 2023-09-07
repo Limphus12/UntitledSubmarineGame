@@ -9,6 +9,7 @@ public class SubmarineFuel : MonoBehaviour
     [SerializeField] private float maxFuel, fuelConsumption;
 
     [SerializeField] private Rigidbody submarineRB;
+    [SerializeField] private SubmarineController submarineController;
 
     [SerializeField] private SliderUI slider;
 
@@ -40,7 +41,12 @@ public class SubmarineFuel : MonoBehaviour
     {
         if (!submarineRB) return;
 
-        if (submarineRB.velocity.magnitude > 1f)
+        //if (submarineRB.velocity.magnitude > 1f)
+        //{
+        //    UseFuel();
+        //}
+
+        if (submarineController.GetCurrentThrust > 0.1f)
         {
             UseFuel();
         }
