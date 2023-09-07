@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] private UnityEvent loadSceneEvent;
+
     [SerializeField] private Animator fadeToBlackAnimator;
     [SerializeField] private float fadeTime;
 
@@ -13,12 +15,16 @@ public class SceneLoader : MonoBehaviour
     {
         fadeToBlackAnimator.SetTrigger("fadeTo");
 
+        loadSceneEvent?.Invoke();
+
         StartCoroutine(LoadSceneFade(scene));
     }
 
     public void LoadScene(string scene)
     {
         fadeToBlackAnimator.SetTrigger("fadeTo");
+
+        loadSceneEvent?.Invoke();
 
         StartCoroutine(LoadSceneFade(scene));
     }
