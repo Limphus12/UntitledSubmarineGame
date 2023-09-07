@@ -67,6 +67,7 @@ public class SubmarineController : MonoBehaviour
 
     private void Update()
     {
+        verticalMovement = Input.GetAxis("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space)) ToggleThrust();
         if (engineToggle) ChangeSpeed(0);
