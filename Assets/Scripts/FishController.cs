@@ -101,7 +101,7 @@ public class FishController : MonoBehaviour
     {
         float distance = Vector3.Distance(wanderTargetPos, transform.position);
 
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if (distance < 10f)
         {
