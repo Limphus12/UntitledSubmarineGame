@@ -13,6 +13,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(int scene)
     {
+        Debug.Log("Loading Scene");
+
         loadSceneEvent?.Invoke();
 
         fadeToBlackAnimator.SetTrigger("fadeTo");
@@ -22,6 +24,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string scene)
     {
+        Debug.Log("Loading Scene");
+
         loadSceneEvent?.Invoke();
 
         fadeToBlackAnimator.SetTrigger("fadeTo");

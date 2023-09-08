@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     private GameStateManager gameStateManager;
 
-    [SerializeField] private GameObject quitButton;
+    [SerializeField] private GameObject menuButton;
 
     private void Start()
     {
@@ -20,18 +20,18 @@ public class UIManager : MonoBehaviour
 
     private void CheckGameState(object sender, GameStateManager.OnGameStateChangedEventArgs e)
     {
-        if (!quitButton) return;
+        if (!menuButton) return;
 
         switch (e.i)
         {
             case GameStateManager.GameState.PLAY:
 
-                quitButton.SetActive(false);
+                menuButton.SetActive(false);
 
                 break;
             case GameStateManager.GameState.PAUSE:
 
-                quitButton.SetActive(true);
+                menuButton.SetActive(true);
 
                 break;
 
