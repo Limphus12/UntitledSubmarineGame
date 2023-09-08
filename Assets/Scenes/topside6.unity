@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 191469255}
   - component: {fileID: 191469254}
   m_Layer: 0
-  m_Name: QuitButton
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1858,7 +1858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44421244343ba54c9887d2c04332d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButton: {fileID: 191469253}
+  menuButton: {fileID: 191469253}
+  interactionUI: {fileID: 1808018221}
 --- !u!4 &1239307700
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,15 +1899,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 23ac33cf7f18b3a40888d3fb05be29e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.59001
+      value: -56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 23ac33cf7f18b3a40888d3fb05be29e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.52
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 23ac33cf7f18b3a40888d3fb05be29e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.329994
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 23ac33cf7f18b3a40888d3fb05be29e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2139,10 +2140,22 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.08
-  m_Height: 6.83
+  m_Radius: 1
+  m_Height: 6
   m_Direction: 0
-  m_Center: {x: 0, y: 0.83, z: 0}
+  m_Center: {x: -0.25, y: 0.8, z: 0}
+--- !u!114 &1468209158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468209155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8589f4c34808c4fb038f07d5dc9314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502375843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2580,11 @@ CanvasRenderer:
 --- !u!224 &1793552361 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6200931986390568238, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
+  m_PrefabInstance: {fileID: 1350655796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1808018221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1108118375059343628, guid: 68b513a0c55f61f42b8a236f4ed72120, type: 3}
   m_PrefabInstance: {fileID: 1350655796}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1819624893

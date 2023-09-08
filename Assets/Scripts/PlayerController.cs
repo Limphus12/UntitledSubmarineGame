@@ -250,8 +250,6 @@ public class PlayerController : MonoBehaviour
 
     #region Other
 
-    public GameObject submouseOver;
-
     // All your raycasting needs! - Limphus
     void Raycasting()
     {
@@ -260,26 +258,6 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out pickupHit, pickupRaycastLength))
         {
           
-        }
-
-        if (submouseOver)
-        {
-
-            RaycastHit topsideHit;
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out topsideHit, 50f))
-            {
-                if (topsideHit.transform.gameObject == GameManager.Submarine)
-                {
-                    submouseOver.SetActive(true);
-
-                    if (Input.GetKeyDown(KeyCode.F))
-                    {
-                        GameManager.LoadIntoGame();
-                    }
-                }
-                else submouseOver.SetActive(false);
-            }
-            else submouseOver.SetActive(false);
         }
     }
 

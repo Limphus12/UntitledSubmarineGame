@@ -1102,7 +1102,6 @@ MonoBehaviour:
   canCrouch: 1
   isCrouching: 0
   isProning: 0
-  submouseOver: {fileID: 1108118375059343628}
 --- !u!114 &1510603169484650214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,8 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee8ad3670eb2e04aa78cedc2a8b4dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRange: 5
-  interactionKey: 101
+  interactionRange: 10
+  interactionKey: 102
   raycastPoint: {fileID: 6200931987232507963}
 --- !u!1 &6900184044890774749
 GameObject:
