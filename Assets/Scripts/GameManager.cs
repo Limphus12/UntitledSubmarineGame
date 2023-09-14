@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     [Space, SerializeField] private GameObject playerSpawnpoint;
     [Space, SerializeField] private SubmarineController SubController;
 
+    [Header("Player - Submarine Switching")]
+    [SerializeField] private float switchingDistance = 25f;
+
 
     private float depths;
     private float depthp;
@@ -108,8 +111,17 @@ public class GameManager : MonoBehaviour
     }
 
     bool inSubmarine = true;
+
     private void Switch()
     {
+        //add a distance check here beforehand
+        float distance = Vector3.Distance(player.transform.position, submarine.transform.position);
+
+        if (distance < switchingDistance && inSubmarine)
+        {
+            
+        }
+
         inSubmarine = !inSubmarine;
         subhud.SetActive(inSubmarine); subcamerarig.SetActive(inSubmarine); player.SetActive(!inSubmarine);
 

@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mainmenu.unity
     guid: 315bf3124a3b0b941b19815179ae76ce
   - enabled: 1
-    path: Assets/Scenes/topside4.unity
-    guid: 4875805292cece2449160ac01c56a823
+    path: Assets/Scenes/topside6.unity
+    guid: f18cde89f02db084bbbf6c4cae2f4b21
   - enabled: 1
     path: Assets/Scenes/underwatergm.unity
     guid: 91b90694c1741d844b3d55e8a9ef9ce7
-  - enabled: 0
-    path: Assets/Scenes/topside3.unity
-    guid: c8b03ac555ec94d45b288b03b0c7d11a
   m_configObjects: {}

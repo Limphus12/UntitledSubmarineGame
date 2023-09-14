@@ -13,7 +13,7 @@ public class PlatformParent : MonoBehaviour
     {
         collision.transform.SetParent(null);
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         //other.transform.SetParent(transform);

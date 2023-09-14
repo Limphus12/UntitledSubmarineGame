@@ -13,6 +13,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuButton;
     [SerializeField] private GameObject interactionUI;
 
+    [Header("Controls UI")]
+    [SerializeField] private GameObject fKeyUI;
+    [SerializeField] private GameObject mouseUI;
+
+
     private void Start()
     {
         //make sure we have our script references
