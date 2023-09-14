@@ -62,11 +62,43 @@ public class UIManager : MonoBehaviour
         interactionScript.OnInteractionCheck -= CheckInteractionUI;
     }
 
-    private void CheckInteractionUI(object sender, Events.OnBoolChangedEventArgs e)
+    private void CheckInteractionUI(object sender, InteractionScript.OnInteractEventArgs e)
     {
         if (!interactionUI) return;
 
         interactionUI.SetActive(e.i);
+
+        if (e.j == null)
+        {
+            //if we have no interactable, turn off this ui
+            fKeyUI.SetActive(e.i);
+            mouseUI.SetActive(e.i);
+
+            return;
+        }
+
+        if (!fKeyUI || !mouseUI) return;
+
+        Door door = e.j.GetComponent<Door>();
+
+        if (door)
+        {
+            fKeyUI.SetActive(e.i);
+        }
+
+        Button button = e.j.GetComponent<Button>();
+
+        if (button)
+        {
+            fKeyUI.SetActive(e.i);
+        }
+
+        PickupObject pickupObject = e.j.GetComponent<PickupObject>();
+
+        if (pickupObject)
+        {
+            mouseUI.SetActive(e.i);
+        }
     }
 
     private void CheckGameState(object sender, GameStateManager.OnGameStateChangedEventArgs e)

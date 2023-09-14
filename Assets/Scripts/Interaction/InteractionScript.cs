@@ -11,7 +11,9 @@ public class InteractionScript : MonoBehaviour
 
     [SerializeField] private Transform raycastPoint;
 
-    public event EventHandler<Events.OnBoolChangedEventArgs> OnInteractionCheck;
+    public event EventHandler<OnInteractEventArgs> OnInteractionCheck;
+
+    public class OnInteractEventArgs : EventArgs { public bool i; public GameObject j; }
 
     private void Update()
     {
@@ -50,7 +52,7 @@ public class InteractionScript : MonoBehaviour
 
             if (interactable != null)
             {
-                OnInteractionCheck?.Invoke(this, new Events.OnBoolChangedEventArgs { i = true });
+                OnInteractionCheck?.Invoke(this, new OnInteractEventArgs { i = true, j = hit.transform.gameObject });
 
                 if (Input.GetKeyDown(interactionKey))
                 {
@@ -60,10 +62,10 @@ public class InteractionScript : MonoBehaviour
 
             else if (interactable == null)
             {
-                OnInteractionCheck?.Invoke(this, new Events.OnBoolChangedEventArgs { i = false });
+                OnInteractionCheck?.Invoke(this, new OnInteractEventArgs { i = false });
             }
         }
 
-        else OnInteractionCheck?.Invoke(this, new Events.OnBoolChangedEventArgs { i = false });
+        else OnInteractionCheck?.Invoke(this, new OnInteractEventArgs { i = false });
     }
 }
