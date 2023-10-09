@@ -84,7 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 8555df3c5fa78ab41bee98a558be1d9b, type: 3}
+        m_Texture: {fileID: 8900000, guid: 106dfb493fa7d9f439e373d62ac431a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
@@ -116,7 +116,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Exposure: 0.44
+    - _Exposure: 0.71
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -147,7 +147,7 @@ Material:
     - _GroundColor: {r: 0.36899996, g: 0.34899998, b: 0.34099993, a: 1}
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tint: {r: 0, g: 1, b: 0.8022444, a: 0.33333334}
+    - _Tint: {r: 1, g: 1, b: 1, a: 0.33333334}
   m_BuildTextureStacks: []
 --- !u!114 &3571877925458191989
 MonoBehaviour:
