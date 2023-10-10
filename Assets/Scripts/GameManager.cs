@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F)) Switch();
 
-        if (depths < 10) LoadIntoHangar();
+        //if (depths < 10) LoadIntoHangar();
 
         float y;
 
