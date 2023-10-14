@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Seiya's testingscene.unity
     guid: 9ac2adee6e9b08440aeaf64815f3d9d1
+  - enabled: 1
+    path: Assets/Scenes/Jenisha's whiteboxing scene.unity
+    guid: ede705e2ae86b364b8c2fedd45588f18
   m_configObjects: {}
