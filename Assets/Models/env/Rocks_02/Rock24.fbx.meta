@@ -11,7 +11,7 @@ ModelImporter:
     second: Cube.008|Cube.008|Cube.007|Cube.017|Cube.007|Cube.007Action
   externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
